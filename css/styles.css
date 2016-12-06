@@ -1,8 +1,8 @@
 body
 {
-	background-color: #363946;
+	background: white;
 	font-family: Verdana;
-	color: white;
+	color: rgba(67,115,149,.4);
 }
 
 p
