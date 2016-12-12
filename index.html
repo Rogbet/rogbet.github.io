@@ -4,11 +4,14 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Copas para tu boda</title>
-  <meta name="description" content="My Website">
+  <title>Copas para bodas</title>
+  <meta name="description" content="Copas para Bodas">
   <meta name="author" content="SitePoint">
 
   <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
 
 <body>
@@ -16,7 +19,50 @@
 		<h3 class="title">Copas Bodas</h3>
 
 		<p>Aqui encontraras los mejores diseños de copas para tu boda a un increible precio</p>
+
+    <a id="navCatalogoCopas" href="./views/admin/catalogocopas.html">Catalogo de Copas</a>
+    <button id="login-user" style="position:absolute;right:10px;top:10px">Log in</button>
+
 	</div>
+
+  <div id="dialog-form" title="Log in">
+  <form>
+    <fieldset>
+      <label for="email">Email</label>
+      <input type="text" name="email" id="email" class="text ui-widget-content ui-corner-all">
+      <label for="password">Contraseña</label>
+      <input type="password" name="password" id="password" class="text ui-widget-content ui-corner-all">
+ 
+      <!-- Allow form submission with keyboard without duplicating the dialog button -->
+      <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+    </fieldset>
+  </form>
+</div>
   <script src="js/app.js"></script>
 </body>
+
+
+<script src="https://www.gstatic.com/firebasejs/3.6.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyB2imuvX5uy2iTfFEOHenk0A5m5C0KucaY",
+    authDomain: "copas-para-bodas.firebaseapp.com",
+    databaseURL: "https://copas-para-bodas.firebaseio.com",
+    storageBucket: "copas-para-bodas.appspot.com",
+    messagingSenderId: "776737953293"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  <script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
+
+  <script src="js/index.js"></script>
 </html>
