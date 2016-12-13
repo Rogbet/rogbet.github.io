@@ -1,52 +1,70 @@
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
 
-  <title>Copas para bodas</title>
-  <meta name="description" content="Copas para Bodas">
-  <meta name="author" content="SitePoint">
+    <title>Copas para bodas</title>
+    <meta name="description" content="Copas para Bodas">
+    <meta name="author" content="SitePoint">
 
-  <link rel="stylesheet" href="../../css/styles.css?v=1.0">
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="../../css/styles.css?v=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
 
 <body>
     <div>
-      <form>
-        <h1>Añadir Imagenes para bodas</h1>
+        <div class="col-md-12">
+            <div class="col-md-4">
+                <form>
+                    <h3>Añadir Imagenes</h3>
 
-        <label for="title">Titulo</label>
-        <input type="text" name="title" id="title">
+                    <div class="form-group">
+                        <label for="title">Titulo</label>
+                        <input type="text" name="title" id="title" class="form-control">
+                    </div>
 
-        <label for="fileItem">Titulo</label>
-        <input type="file" name="fileItem" id="fileItem">
-        
-        <input id="btnGuardarImagen" type="button" title="Guardar" value="Guardar">
-      </form>
-    </div>
+                    <div class="form-group">
+                        <label for="price">Precio</label>
+                        <input type="text" name="price" id="price" class="form-control">
+                    </div>
 
-    <div id="images">
+
+                    <div class="form-group">
+                        <label for="fileItem">Imagen</label>
+                        <input type="file" name="fileItem" id="fileItem" class="form-control">
+                    </div>
+
+                    <input id="btnGuardarImagen" type="button" title="Guardar" value="Guardar" class="btn btn-default">
+                </form>
+            </div>
+        </div>
+
+        <hr style="border:1px solid #eee">
+
+        <div style="margin:15px 30px">
+            <h3>Imagenes</h3>
+            <div id="images">
+            </div>
+        </div>
+
     </div>
 </body>
 
 <script src="https://www.gstatic.com/firebasejs/3.6.3/firebase.js"></script>
 <script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyB2imuvX5uy2iTfFEOHenk0A5m5C0KucaY",
-    authDomain: "copas-para-bodas.firebaseapp.com",
-    databaseURL: "https://copas-para-bodas.firebaseio.com",
-    storageBucket: "copas-para-bodas.appspot.com",
-    messagingSenderId: "776737953293"
-  };
-  firebase.initializeApp(config);
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyB2imuvX5uy2iTfFEOHenk0A5m5C0KucaY",
+        authDomain: "copas-para-bodas.firebaseapp.com",
+        databaseURL: "https://copas-para-bodas.firebaseio.com",
+        storageBucket: "copas-para-bodas.appspot.com",
+        messagingSenderId: "776737953293"
+    };
+    firebase.initializeApp(config);
 </script>
 
-<script
-  src="https://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 <script src="../../js/admin/catalogocopas.js"></script>
+
 </html>
